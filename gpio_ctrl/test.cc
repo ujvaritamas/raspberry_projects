@@ -17,7 +17,7 @@ int main(void){
 		cout<<"setup wiring pi failed"<<endl;
 		return 1;
 	}
-    
+
     setup();
     // Main program loop
     while(1)
@@ -27,7 +27,7 @@ int main(void){
         delay(500); 	// Delay 500ms
         digitalWrite(0, LOW);
         delay(500); 	// Delay 500ms
-    {
+    }
 
 
     return 0;
