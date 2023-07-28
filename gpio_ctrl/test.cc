@@ -1,5 +1,5 @@
 #include <iostream>
-#include <wiringPi.h>
+#include "wiringPi.h"
 
 using namespace std;
 
@@ -24,8 +24,10 @@ int main(void){
     {
         // Toggle the LED
         digitalWrite(0, HIGH);
+        cout << "write to high"<<endl;
         delay(500); 	// Delay 500ms
         digitalWrite(0, LOW);
+        cout << "write to low"<<endl;
         delay(500); 	// Delay 500ms
     }
 

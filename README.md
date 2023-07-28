@@ -29,4 +29,4 @@ Install wiringPi
     gpio -v
     gpio readall
 
-    gcc test.cc -o test -lwiringPi
+    g++ test.cc -o test -lwiringPi
