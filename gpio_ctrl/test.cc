@@ -23,7 +23,7 @@ int main(void){
     while(1)
     {
         // Toggle the LED
-        digitalWrite(0, HIGH);
+        digitalWrite(1, HIGH);
         cout << "write to high"<<endl;
         delay(500); 	// Delay 500ms
         digitalWrite(0, LOW);
