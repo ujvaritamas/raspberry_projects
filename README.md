@@ -30,3 +30,7 @@ Install wiringPi
     gpio readall
 
     g++ test.cc -o test -lwiringPi
+
+
+
+    
