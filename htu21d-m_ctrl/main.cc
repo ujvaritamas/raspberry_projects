@@ -67,7 +67,7 @@ int main (void)
     while(1){
     printf("%5.2fC\n", getTemperature(fd));
 	printf("%5.2f%%rh\n", getHumidity(fd));
-    delay(5000)
+    delay(5000);
     }
     
     return 0;
