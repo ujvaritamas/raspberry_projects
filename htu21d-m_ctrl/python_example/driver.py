@@ -8,6 +8,15 @@ HTU21D_I2C_ADDR = 0x40
 REG_TEMP = 0xE3
 REG_HUM = 0xE5
 
+def setup_i2c():
+    try:
+        # Open I2C bus
+        bus = smbus2.SMBus(1)  # 1 indicates /dev/i2c-1
+        return bus
+    except Exception as e:
+        print("Failed to initialize I2C communication:", e)
+        return None
+
 # Function to get temperature
 def get_temperature(bus):
     # Send temperature measurement command
