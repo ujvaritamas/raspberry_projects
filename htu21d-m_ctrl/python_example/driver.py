@@ -12,14 +12,16 @@ humidity_pattern = r"Humidity: (\d+\.\d+)C"
 for line in output.splitlines():
     decoded_line = line.decode()
 
-    match = re.search(temperature_pattern, decoded_line)
+    matchT = re.search(temperature_pattern, decoded_line)
 
-    if match:
-        temperature = float(match.group(1))
+    if matchT:
+        temperature = float(matchT.group(1))
         print("Temperature:", temperature)
+        continue
 
-    match = re.search(humidity_pattern, decoded_line)
+    matchH = re.search(humidity_pattern, decoded_line)
 
-    if match:
+    if matchH:
         humidity = float(match.group(1))
         print("Humidity:", humidity)
+        continue
