@@ -17,13 +17,9 @@ for line in output.splitlines():
     if match:
         temperature = float(match.group(1))
         print("Temperature:", temperature)
-    else:
-        print("Temperature not found in the output.")
 
     match = re.search(humidity_pattern, decoded_line)
 
     if match:
         humidity = float(match.group(1))
         print("Humidity:", humidity)
-    else:
-        print("Humidity not found in the output.")
