@@ -1,7 +1,7 @@
 //htu21d-m module: https://www.hestore.hu/prod_getfile.php?id=8627
 //https://roboticsbackend.com/wiringpi-i2c-tutorial-rasperry-pi-adxl345/
 
-//compile : g++ -o get_sensor_data get_sensor_data.cpp -lwiringPi
+//compile : g++ -o get_sensor_data get_sensor_data.cc -lwiringPi
 
 #include <iostream>
 #include <unistd.h>
@@ -66,11 +66,8 @@ int main (void)
     }
     std::cout << "I2C communication successfully setup.\n";
 
-    //while(1){
-    printf("%5.2fC\n", getTemperature(fd));
-	printf("%5.2f%%rh\n", getHumidity(fd));
-    delay(5000);
-    //}
+    printf("Temperature: %5.2fC\n", getTemperature(fd));
+	printf("Humidity: %5.2f%%rh\n", getHumidity(fd));
 
     
     return 0;
