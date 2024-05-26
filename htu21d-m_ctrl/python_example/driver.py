@@ -5,7 +5,7 @@ import re
 output = subprocess.check_output(["../cpp_example/get_sensor_data"])
 
 temperature_pattern = r"Temperature: (\d+\.\d+)C"
-humidity_pattern = r"Humidity: (\d+\.\d+)C"
+humidity_pattern = r"Humidity: (\d+\.\d+)%rh"
 
 
 # Split the output into lines and print each line
@@ -22,6 +22,6 @@ for line in output.splitlines():
     matchH = re.search(humidity_pattern, decoded_line)
 
     if matchH:
-        humidity = float(match.group(1))
+        humidity = float(matchH.group(1))
         print("Humidity:", humidity)
         continue
